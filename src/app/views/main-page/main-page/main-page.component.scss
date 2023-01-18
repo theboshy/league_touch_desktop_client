@@ -1,0 +1,11 @@
+@import './src/styles';
+
+.main-container {
+  background-color: $base-color;
+}
+
+.title {
+  color: $secondary-color;
+  font-size: 1.5rem;
+  font-weight: bold;
+}

@@ -8,7 +8,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "start-electron": "ng build && electron ."
+    "start-electron": "ng build && electron .",
+    "watch-electron": "nodemon --watch . --exec \"electron .\""
   },
   "private": true,
   "dependencies": {
@@ -29,6 +30,7 @@
     "@angular/cli": "~15.1.1",
     "@angular/compiler-cli": "^15.1.0",
     "@types/jasmine": "~4.3.0",
+    "bulma": "^0.9.4",
     "electron": "^22.0.2",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
@@ -36,6 +38,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "nodemon": "^2.0.20",
     "typescript": "~4.9.4"
   }
 }
