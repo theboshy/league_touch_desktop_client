@@ -7,7 +7,7 @@ import {MainPageModule} from "./views/main-page/main-page.module";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -15,6 +15,6 @@ import {MainPageModule} from "./views/main-page/main-page.module";
     MainPageModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

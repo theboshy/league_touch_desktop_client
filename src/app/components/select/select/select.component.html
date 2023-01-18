@@ -1,0 +1,9 @@
+<div class="select">
+  <select class="select-text" required>
+    <!-- <option disabled selected></option> -->
+    <option *ngFor="let option of options" [value]="option.id">{{option.value}}</option>
+  </select>
+  <span class="select-highlight"></span>
+  <span class="select-bar"></span>
+  <label class="select-label">{{selectLabel}} *</label>
+</div>

@@ -1,13 +1,27 @@
-import { Component } from '@angular/core';
-import {APP_BASE_HREF} from "@angular/common";
+import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.scss']
+  styleUrls: ['./main-page.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class MainPageComponent {
   constructor() {
-    console.log(APP_BASE_HREF)
   }
+
+  options: Array<any> = [
+    {
+      id: 'NA',
+      value: "NA",
+    },
+    {
+      id: 'LAN',
+      value: "LAN",
+    },
+    {
+      id: 'LAS',
+      value: "LAS",
+    },
+  ];
 }

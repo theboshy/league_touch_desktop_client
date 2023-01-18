@@ -1,0 +1,125 @@
+//-- input styles
+
+body {
+  font-family: "Anek Latin", sans-serif;
+}
+
+.has-float-label {
+  display: block;
+  position: relative;
+  margin-bottom:16px;
+}
+.has-float-label input:hover:not(:disabled):not(:focus) {
+  border-bottom:2px solid white !important;
+}
+.has-float-label input[value=""] {
+  border-top:2px solid white !important;
+}
+
+.has-float-label input:hover:invalid:not(:placeholder-shown):not(:focus) {
+  border-bottom:2px solid #790604 !important;
+  font-weight: bold;
+}
+
+.has-float-label input:focus {
+  border-bottom:2px solid white;
+  transition: all .2s;
+}
+
+.has-float-label input:invalid:not(:focus) {
+  border-bottom:2px solid #790604;
+  font-weight: bold;
+}
+
+.has-float-label input:placeholder-shown:not(:focus) {
+  border-bottom:2px solid white;
+}
+
+.has-float-label input:disabled {
+  border-bottom:2px dotted #8a8a8a !important;
+  pointer-events: none;
+  background-color:inherit;
+}
+
+.has-float-label input {
+  font-size: inherit;
+  padding: 16px 0 8px 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow:none;
+  background-color:initial;
+  color: white;
+  caret-color:white;
+  border-bottom:2px solid white;
+  font-weight: bold;
+}
+
+input {
+  font-size: 14px;
+  line-height: 1.15;
+  margin: 0;
+  outline: none;
+}
+
+
+.has-float-label input:placeholder-shown:not(:focus) + .label {
+  font-size: 16px;
+  top: 20px;
+  //bottom:-8px;
+  color:white;
+}
+
+.has-float-label label, .has-float-label > .label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: text;
+  font-size: 12px;
+  color: white;
+  transition: all .2s;
+  pointer-events:none;
+
+}
+
+.has-float-label input:invalid ~ .label {
+  color:#790604;
+  font-weight: bold;
+}
+
+.has-float-label input:focus ~ .label {
+  color:white;
+}
+
+.has-float-label input:invalid:not(:focus):not(:placeholder-shown) ~ .error {
+  display:block;
+}
+.error {
+  color:#790604;
+  display:none;
+  font-weight: bold;
+}
+
+.has-float-label input:invalid:not(:focus):not(:placeholder-shown) ~ .helper {
+  display:none;
+}
+.helper {
+  display:block;
+  color:#6d6d6d;
+
+}
+
+.helper, .error {
+  font-size:12px;
+  padding-top:8px;
+  line-height:1;
+}
+
+a {text-decoration:none;}
+
+a:visited input:invalid:not(:focus) {
+  border-bottom:2px solid red !important;
+}
+
+a:visited .helper  {
+  color:#eee;
+}
