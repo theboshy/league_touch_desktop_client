@@ -1,4 +1,5 @@
 import {Component, ViewEncapsulation} from '@angular/core';
+import {LeagueApi} from "../../../services/league.api";
 
 @Component({
   selector: 'app-main-page',
@@ -7,7 +8,15 @@ import {Component, ViewEncapsulation} from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class MainPageComponent {
-  constructor() {
+
+  constructor(private  leagueApi: LeagueApi) {
+  }
+
+
+  async sendRequest() {
+    let result = await this.leagueApi.getSummonerByName("mononised", "LAT_NORTH")
+    let regions = await this.leagueApi.getRegions();
+    console.log(result)
   }
 
   options: Array<any> = [
